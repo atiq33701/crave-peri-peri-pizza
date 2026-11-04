@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="34" fill="#0b0b0b"/>
+  <g transform="translate(100 66)">
+    <path d="M-34 -2 L-26 14 L26 14 L34 -2 Z" fill="#fdd70f"/>
+    <path d="M-34 -2 Q0 -34 34 -2 Z" fill="#f2b84b"/>
+    <circle cx="-10" cy="-6" r="4" fill="#d62a1f"/>
+    <circle cx="8" cy="-10" r="4" fill="#d62a1f"/>
+    <circle cx="16" cy="2" r="3.5" fill="#d62a1f"/>
+    <path d="M-26 14 L0 40 L26 14 Z" fill="#f2b84b" opacity="0"/>
+  </g>
+  <path d="M22 116 L100 104 L178 116 L178 158 L100 146 L22 158 Z" fill="#e0261b"/>
+  <path d="M22 116 L10 126 L22 136 L10 148 L22 158 Z" fill="#a91a12"/>
+  <path d="M178 116 L190 126 L178 136 L190 148 L178 158 Z" fill="#a91a12"/>
+  <text x="100" y="140" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-size="30" font-weight="900" fill="#ffffff" letter-spacing="1">CRAVE</text>
+  <text x="100" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#fdd70f" letter-spacing="3">PIZZA &amp; GRILL</text>
+</svg>

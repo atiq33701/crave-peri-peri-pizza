@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <g stroke="#f2c230" stroke-width="9" stroke-linecap="round">
+    <line x1="72" y1="88" x2="68" y2="36"/>
+    <line x1="84" y1="88" x2="88" y2="28"/>
+    <line x1="96" y1="88" x2="100" y2="40"/>
+    <line x1="108" y1="88" x2="116" y2="32"/>
+    <line x1="120" y1="88" x2="132" y2="44"/>
+    <line x1="130" y1="88" x2="144" y2="52"/>
+  </g>
+  <g stroke="#e5a91d" stroke-width="3" stroke-linecap="round">
+    <line x1="76" y1="52" x2="74" y2="44"/>
+    <line x1="112" y1="52" x2="115" y2="44"/>
+  </g>
+  <path d="M52 84 H148 L138 172 Q137 178 131 178 H69 Q63 178 62 172 Z" fill="#d62a1f"/>
+  <path d="M56 112 H144 L141 140 H59 Z" fill="#fdf3dc"/>
+  <text x="100" y="132" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-size="18" font-weight="900" fill="#d62a1f">FRIES</text>
+  <rect x="48" y="78" width="104" height="10" rx="4" fill="#b91f16"/>
+</svg>
