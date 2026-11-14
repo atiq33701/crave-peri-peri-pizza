@@ -13,7 +13,7 @@ const highlights = [
 const menuPreview = [
   { title: "Kebabs", image: "/images/doner-naan.jpg" },
   { title: "Sides", image: "/images/wedges.jpg" },
-  { title: "Desserts", image: "/images/dessert.svg" },
+  { title: "Desserts", image: "/images/icecream.jpg" },
   { title: "Drinks", image: "/images/dr-pepper.jpg" },
 ];
 
