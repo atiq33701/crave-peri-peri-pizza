@@ -2,10 +2,12 @@
 // Details taken from the Google Business Profile. Email is still a placeholder: replace it when known.
   // Website: https://craveperiperipizza.co.uk/
 
+import { hoursRows } from "@/lib/hours";
+
 export const site = {
   website: "https://craveperiperipizza.co.uk/",
   rating: "4.5",
-  reviewCount: 127,
+  reviewCount: 129,
   name: "Crave Peri Peri Pizza",
   tagline: "Peri Peri • Pizza • Grill & Kebab",
   address: "45a Leeming St, Mansfield NG18 1NB, United Kingdom",
@@ -14,15 +16,8 @@ export const site = {
   // WhatsApp number: country code + number, digits only (no + or spaces)
   whatsappNumber: "441623761144",
   whatsappMessage: "Hello Crave Peri Peri Pizza, I have a question.",
-  hours: [
-    { day: "Monday", time: "Open 24 hours" },
-    { day: "Tuesday", time: "Open 24 hours" },
-    { day: "Wednesday", time: "Open 24 hours" },
-    { day: "Thursday", time: "Open 24 hours" },
-    { day: "Friday", time: "Open 24 hours" },
-    { day: "Saturday", time: "Open 24 hours" },
-    { day: "Sunday", time: "Open 24 hours" },
-  ],
+  // Opening hours are set in lib/config.js
+  hours: hoursRows(),
 };
 
 export const navLinks = [

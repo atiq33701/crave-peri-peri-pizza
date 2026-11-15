@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { galleryFoodPhotos } from "@/lib/menuData";
 
 // Each section: title, optional text, and its photos. Edit freely.
 const sections = [
@@ -25,9 +26,14 @@ const sections = [
     ],
   },
   {
+    title: "More Food Photos",
+    text: "More of what we make in our kitchen.",
+    photos: galleryFoodPhotos,
+  },
+  {
     title: "Menu Cards & Deals",
     contain: true,
-    text: "Our printed menus and deals. Message us on WhatsApp for the latest prices.",
+    text: "Our printed menus and deals. Prices and items on the website are the most up to date.",
     photos: [
       { src: "/images/gallery/menu-card-deals.png", alt: "Crave deals menu card" },
       { src: "/images/gallery/menu-card-3.jpg", alt: "Crave menu card with deals and prices" },

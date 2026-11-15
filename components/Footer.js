@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail, MessageCircle, ClipboardList } from "lucide-react";
 import { site, navLinks, whatsappLink, mapsLink } from "@/app/site";
 
 export default function Footer() {
@@ -81,6 +81,15 @@ export default function Footer() {
       <div className="border-t border-neutral-800 px-4 py-5 text-center text-xs text-neutral-500">
         <p>
           © {new Date().getFullYear()} {site.name}. All rights reserved.
+        </p>
+        <p className="mt-3">
+          <Link
+            href="/admin"
+            className="inline-flex items-center gap-2 rounded-full border border-neutral-700 px-4 py-2 font-semibold text-neutral-300 hover:border-gold hover:text-gold"
+          >
+            <ClipboardList size={16} />
+            Staff: See all orders
+          </Link>
         </p>
         <p className="mt-1">
           If you have a food allergy, please tell us before you eat. Prices may change.

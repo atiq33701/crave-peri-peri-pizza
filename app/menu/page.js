@@ -6,10 +6,10 @@ import MenuClient from "./MenuClient";
 export const metadata = {
   title: "Menu",
   description:
-    "Browse the Crave Peri Peri Pizza menu: pizza, burgers, peri peri chicken, wraps, kebabs, sides, sauces, desserts and drinks. Order on WhatsApp.",
+    "Order online from Crave Peri Peri Pizza: pizzas, calzones, burgers, wraps, kebabs, fried chicken, meal deals, sides and drinks for delivery or collection in Mansfield.",
 };
 
-// The menu items, photos and descriptions live in ./menuData.js
+// The menu items, prices, options and photos live in lib/menuData.js
 export default function MenuPage() {
   return (
     <>
@@ -19,8 +19,8 @@ export default function MenuPage() {
         </p>
         <h1 className="text-4xl font-extrabold sm:text-5xl">Our Menu</h1>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-neutral-300 sm:text-base">
-          A look at what we serve. Tap any item to see more, then order on WhatsApp.
-          Message us for the full, up to date price list.
+          Order online for delivery or collection. Pick your food, add it to your cart and
+          check out.
         </p>
       </section>
 

@@ -1,10 +1,20 @@
-import { MessageCircle, Heart, Utensils, Award } from "lucide-react";
+import { MessageCircle, Heart, Utensils, Award, Check, Ban } from "lucide-react";
 import { site, whatsappLink } from "@/app/site";
 
 export const metadata = {
   title: "About Us",
   description: `Learn about ${site.name}, a Mansfield takeaway serving pizza, burgers, kebabs, wraps and fried chicken.`,
 };
+
+// Taken from the Google Business Profile "About" section.
+const goodToKnow = [
+  { title: "Service options", items: [["Curbside pickup", true], ["Delivery", true], ["Takeout", true], ["Dine-in", false]] },
+  { title: "Offerings", items: [["Late-night food", true], ["Quick bite", true]] },
+  { title: "Atmosphere", items: [["Casual", true]] },
+  { title: "Payments", items: [["Credit cards", true], ["Debit cards", true]] },
+  { title: "Children", items: [["Kids' menu", true]] },
+  { title: "Parking", items: [["Free street parking", true], ["Usually plenty of parking", true]] },
+];
 
 const values = [
   {
@@ -178,6 +188,29 @@ export default function AboutPage() {
                 Friendly service for our customers in Mansfield.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Good to know */}
+      <section className="bg-neutral-100 px-4 py-16">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-center text-sm font-bold uppercase tracking-widest text-brand">Good to Know</p>
+          <h2 className="mt-3 text-center text-3xl font-extrabold text-brand sm:text-4xl">Our Services & Facilities</h2>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {goodToKnow.map((group) => (
+              <div key={group.title} className="rounded-2xl bg-white p-6 shadow-sm">
+                <h3 className="text-base font-extrabold">{group.title}</h3>
+                <ul className="mt-3 space-y-2 text-sm">
+                  {group.items.map(([label, available]) => (
+                    <li key={label} className={`flex items-center gap-2 ${available ? "" : "text-neutral-400"}`}>
+                      {available ? <Check size={16} className="shrink-0 text-green-600" aria-label="Available" /> : <Ban size={16} className="shrink-0" aria-label="Not available" />}
+                      {label}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>

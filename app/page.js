@@ -33,14 +33,14 @@ export default function HomePage() {
               {site.name} in Mansfield.
             </p>
             <p className="text-sm font-semibold text-gold">
-              ★ {site.rating} on Google ({site.reviewCount} reviews) · Delivery · Pickup · Dine-in
+              ★ {site.rating} on Google ({site.reviewCount} reviews) · Delivery · Collection
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/menu"
                 className="rounded-md bg-brand px-6 py-3 text-sm font-bold text-white hover:bg-[#d93204]"
               >
-                View Our Menu
+                Order Online
               </Link>
               <a
                 href={whatsappLink()}

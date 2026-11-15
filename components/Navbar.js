@@ -2,8 +2,23 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X, MessageCircle, ShoppingCart } from "lucide-react";
 import { site, navLinks, whatsappLink } from "@/app/site";
+import { useCart } from "@/components/CartProvider";
+
+function CartLink({ className = "", onClick }) {
+  const { count } = useCart();
+  return (
+    <Link href="/cart" onClick={onClick} aria-label={`Cart, ${count} items`} className={`relative flex items-center gap-2 ${className}`}>
+      <ShoppingCart size={22} />
+      {count > 0 && (
+        <span className="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-brand px-1 text-[11px] font-extrabold text-white">
+          {count}
+        </span>
+      )}
+    </Link>
+  );
+}
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +51,7 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <CartLink className="transition hover:text-gold" />
           <a
             href={whatsappLink()}
             target="_blank"
@@ -47,15 +63,18 @@ export default function Navbar() {
           </a>
         </nav>
 
+        <div className="flex items-center gap-3 md:hidden">
+          <CartLink onClick={() => setIsOpen(false)} />
         <button
           type="button"
-          className="rounded-md p-2 md:hidden"
+          className="rounded-md p-2"
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
           onClick={() => setIsOpen((open) => !open)}
         >
           {isOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
+        </div>
       </div>
 
       {isOpen && (

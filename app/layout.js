@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { site } from "@/app/site";
+import { CartProvider } from "@/components/CartProvider";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -31,10 +32,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en-GB">
       <body className={`${montserrat.variable} font-sans antialiased`}>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <WhatsAppButton />
+        <CartProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+          <WhatsAppButton />
+        </CartProvider>
       </body>
     </html>
   );
